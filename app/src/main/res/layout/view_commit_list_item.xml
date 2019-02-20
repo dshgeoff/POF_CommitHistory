@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llCommitContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/general_margin_120px"
+    android:background="@drawable/view_commit_selector"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llImageContainer"
+        android:layout_width="@dimen/general_margin_120px"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/general_margin_70px"
+            android:layout_height="@dimen/general_margin_70px"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/general_margin_10px"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <ViewFlipper
+                android:id="@+id/vfDateLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoStart="false"
+                android:flipInterval="@integer/animation_flip_interval"
+                android:inAnimation="@anim/fade_in"
+                android:outAnimation="@anim/fade_out">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

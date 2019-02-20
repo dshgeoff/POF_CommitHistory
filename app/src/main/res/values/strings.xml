@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">POF_CommitHistory</string>
+
+    <string name="homepage_no_results_title">NO COMMITS FOUND</string>
+    <string name="homepage_no_results_subtitle">0 commits returned from url</string>
+</resources>
